@@ -139,7 +139,7 @@ var Runtime = {
 	},
 
 	singleUserMode: function() {
-		return Runtime.isLocalInstall;
+		return Runtime.isLocalInstall;  //在workbench中赋值
 	},
 
 	/*
@@ -253,7 +253,7 @@ var Runtime = {
 	},
 	
 	_addExtension: function(id, extension, pluginID) {
-		if (extension.id) {
+		if (extension.id) {     //若果id在extension中已经出现过，则加pluginID修改id
 			extension.id = pluginID + "." + extension.id;
 		}
 
@@ -261,6 +261,7 @@ var Runtime = {
 		var extensions = Runtime.extensionPoints[id];
 		extensions.push(extension);
 		Runtime.extensionPoints[id] = extensions;
+		//alert("id:" + id + "\n" + "Runtime.extensionPoints[id]:" + JSON.stringify(Runtime.extensionPoints[id]));
 	},
 	
 	getExtensions: function(extensionID, testFunction) {

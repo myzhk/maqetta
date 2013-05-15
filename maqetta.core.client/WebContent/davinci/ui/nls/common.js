@@ -6,13 +6,13 @@ define({ root:
     "discard": "Discard",
     
     // SaveAsWidget dialog
-    "sawdTitle": "Save As Widget",
+    "sawdTitle": "保存为小工具",
     
     // SaveAsWidgetForm
-    "name": "Name",
+    "name": "名称",
     "id": "ID",
-    "version": "Version",
-    "required": "required",
+    "version": "版本",
+    "required": "必填",
     "sawfDesc": "Enter the following information to complete the custom widget metadata.",
     "sawfMetadataTitle": "Edit full metadata for custom widget (advanced)",
     "sawfNamePrompt": "A unique \"common\" name.",

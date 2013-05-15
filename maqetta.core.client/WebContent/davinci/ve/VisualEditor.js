@@ -53,7 +53,7 @@ var VisualEditor = declare("davinci.ve.VisualEditor",  null,  {
 			className: "loading",
 			innerHTML: dojo.replace(
 					'<table><tr><td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;{0}</td></tr></table>',
-					["Loading..."]) // FIXME: i18n
+					["拼命加载中..."]) // FIXME: i18n
 			},
 			this.contentPane.domNode.parentNode,
 			"first");
@@ -213,12 +213,11 @@ var VisualEditor = declare("davinci.ve.VisualEditor",  null,  {
 		}
 		var command = this.getContext().getCommandForStyleChange(value); //#23
 		if(command){
-			 this.getContext().getCommandStack().execute(command);
+			this.getContext().getCommandStack().execute(command);
 			if(command._newId){
 				var widget = widgetUtils.byId(command._newId, context.getDocument());
 				this.context.select(widget);
 			}
-			
 			this._srcChanged();
 			dojo.publish("/davinci/ui/widgetValuesChanged",[value]);
 		}
@@ -504,7 +503,6 @@ var VisualEditor = declare("davinci.ve.VisualEditor",  null,  {
 
 		// set new content
 		context.setSource(context.model);
-
 		// re-establish widget selection in VE
 		var id = context.model.evaluate(xpath).getAttribute('id'),
 			widget = widgetUtils.byId(id, context.getDocument());

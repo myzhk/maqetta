@@ -13,63 +13,63 @@ return {
     "davinci.view": [
         {
             id: "navigator",
-            title: "Files",
+            title: "文件",
             viewClass: "davinci/workbench/Explorer",
             iconClass: "paletteIcon paletteIconFiles"
         },
         {
             id: "hierarchy",
-            title: "Hierarchy"
+            title: "层级"
         },
         {
             id: "outline",
-            title: "Outline",
+            title: "纲要",
             viewClass: "davinci/workbench/OutlineView",
             iconClass: "paletteIcon paletteIconOutline"
         },
 		{
 			id: "comment",
-			title: "Comments",
+			title: "评论",
 			viewClass: "davinci/review/view/CommentView",
             iconClass: "paletteIcon paletteIconComments"
 		},
         {
             id: "scope",
-            title: "Scope"
+            title: "范围"
         },
         {
             id: "properties",
-            title: "Properties",
+            title: "属性",
             viewClass: "davinci/workbench/PropertyEditor"
         },
         {
             id: "problems",
-            title: "Problems",
+            title: "问题",
             viewClass: "davinci/workbench/ProblemsView"
         },
         {
             id: "console",
-            title: "Console"
+            title: "控制台"
         },
         {
             id: "history",
-            title: "History"
+            title: "历史"
         },
         {
             id: "search",
-            title: "Search"
+            title: "搜索"
         }
     ],
     "davinci.preferences": [
         {
-            name: "Project",
+            name: "项目",
             id: "project",
             hide:true,	//FIXME: temporarily don't show project setting preferences. See #3657, #3658
             category: "",
             pageContent: "Project Settings here"
         },
         {
-            name: "Project Settings",
+            name: "项目设置",
             id: "ProjectPrefs",
             category: "davinci.ui.project",
             pane: "davinci/ui/ProjectPreferences",
@@ -110,7 +110,7 @@ return {
                    ]
                },
                {
-                   label: "Create",
+                   label: "创建",
                    path: "new",
                    id: "davinci.new",
                    separator: [
@@ -118,7 +118,7 @@ return {
                    ]
                },
                {
-                   label: "Open",
+                   label: "打开",
                    path: "open",
                    id: "davinci.open",
                    separator: [
@@ -136,7 +136,7 @@ return {
                          });
                      },
                      iconClass: "newOpenMenuItem newMobileAppMenuItem",
-                     label: "Mobile Application...",
+                     label: "移动应用...",
                      // toolbarPath: "davinci.toolbar.main/edit",
                      menubarPath: "davinci.new/newApp"
                  },
@@ -149,7 +149,7 @@ return {
                          });
                      },
                      iconClass: "newOpenMenuItem newDesktopAppMenuItem",
-                     label: "Desktop Application...",
+                     label: "桌面应用...",
                      // toolbarPath: "davinci.toolbar.main/edit",
                      menubarPath: "davinci.new/newApp"
                  },
@@ -162,7 +162,7 @@ return {
                          });
                      },
                      iconClass: "newOpenMenuItem newSketchHiFiMenuItem",
-                     label: "Sketch (high-fidelity)...",
+                     label: "草图（高清晰度）...",
                      // toolbarPath: "davinci.toolbar.main/edit",
                      menubarPath: "davinci.new/newSketch"
                  },
@@ -175,7 +175,7 @@ return {
                          });
                      },
                      iconClass: "newOpenMenuItem newSketchLoFiMenuItem",
-                     label: "Sketch (low-fidelity)...",
+                     label: "草图（低清晰度）...",
                      // toolbarPath: "davinci.toolbar.main/edit",
                      menubarPath: "davinci.new/newSketch"
                  },
@@ -187,7 +187,7 @@ return {
                      	});
                      },
                      iconClass: "newOpenMenuItem newFolderMenuItem",
-                     label: "Folder...",
+                     label: "文件夹...",
                      menubarPath: "davinci.new/newFolder"
                  },
                 {
@@ -198,7 +198,7 @@ return {
                    	});
                    },
                    iconClass: "newOpenMenuItem newCSSMenuItem",
-                   label: "CSS File...",
+                   label: "CSS 文件...",
                    menubarPath: "davinci.new/newFolder"
                },
                {
@@ -209,7 +209,7 @@ return {
                    	});
                    },
                    iconClass: "newOpenMenuItem newJSMenuItem",
-                   label: "JavaScript File...",
+                   label: "JavaScript 脚本文件...",
                    menubarPath: "davinci.new/newFolder"
                },
                {
@@ -220,7 +220,7 @@ return {
                    	});
                    },
                    iconClass: "newOpenMenuItem newThemeMenuItem",
-                   label: "Theme...",
+                   label: "主题...",
                    menubarPath: "davinci.new/newTheme"
                },
                {
@@ -231,7 +231,7 @@ return {
                    	});
                    },
                    iconClass: "newOpenMenuItem newProjectMenuItem",
-                   label: "Project...",
+                   label: "项目...",
                    menubarPath: "davinci.new/newProject"
                },
                {
@@ -242,7 +242,7 @@ return {
                    	});
                    },
                    iconClass: "newOpenMenuItem openFileMenuItem",
-                   label: "File...",
+                   label: "文件...",
                    toolbarPath: "davinci.toolbar.main/edit",
                    menubarPath: "davinci.open/openFile",
                    keyBinding: {accel: true, charOrCode: "o"}
@@ -255,7 +255,7 @@ return {
                    	});
                    },
                    iconClass: "newOpenMenuItem openThemeMenuItem",
-                   label: "Theme Editor...",
+                   label: "主题编辑器...",
                    menubarPath: "davinci.open/openTheme"
                },
                {
@@ -272,7 +272,7 @@ return {
                       	});
                    },
                    iconClass: "newOpenMenuItem openReviewMenuItem",
-                   label: "Review...",
+                   label: "评审...",
                    menubarPath: "davinci.open/openTheme"
                },
 /* Commenting out for M8 - UI is all messed up now
@@ -295,7 +295,7 @@ return {
                      window.focus();
                    },
                    iconClass: "newOpenMenuItem orionIcon",
-                   label: "Orion Navigator",
+                   label: "Orion 向导",
                    menubarPath: "davinci.open/openOrion"
                }
            ]
@@ -312,7 +312,7 @@ return {
                     ]
                 },
                 {
-                    label: "UserSettings",
+                    label: "用户设置",
                     path: "usersettings",
                     id: "davinci.usersettings",
                     className: 'userSettingsMenu',
@@ -323,7 +323,7 @@ return {
                     ]
                 },
                 {
-                    label: "Settings",
+                    label: "设置",
                     path: "settings",
                     id: "davinci.settings",
                     className: 'appSettingsMenu',
@@ -334,7 +334,7 @@ return {
                     ]
                 },
                 {
-                    label: "Help",
+                    label: "帮助",
                     path: "help",
                     id: "davinci.help",
                     className: 'helpMenu',
@@ -353,7 +353,7 @@ return {
                     		Preferences.showPreferencePage();
                     	});
                     },
-                    label: "Preferences...",
+                    label: "偏好设置...",
                     menubarPath: "davinci.settings/settings"
                 },
                 {
@@ -363,7 +363,7 @@ return {
                     		ThemeSetsDialog();
                     	});
                     },
-                    label: "Theme sets...",
+                    label: "主题集...",
                     menubarPath: "davinci.settings/settings"
                 },
                 {
@@ -371,7 +371,7 @@ return {
                     run: function() {
                     	window.open('app/docs/index.html', 'MaqettaDocumentation');
                     },
-                    label: "Documentation",
+                    label: "文档",
                     menubarPath: "davinci.help/help",
                     keyBinding: {charOrCode: dojo.keys.F1}
                 },
@@ -380,7 +380,7 @@ return {
                     run: function() {
                     	window.open('app/docs/index.html#tutorials/tutorials', 'MaqettaTutorials');
                     },
-                    label: "Tutorials",
+                    label: "教程",
                     menubarPath: "davinci.help/help"
                 },
                 {
@@ -388,7 +388,7 @@ return {
                     run: function() {
                     	window.open('http://www.youtube.com/user/Maqetta/', 'MaqettaVideos');
                     },
-                    label: "Videos",
+                    label: "视频",
                     menubarPath: "davinci.help/help"
                 },
                 {
@@ -414,7 +414,7 @@ return {
                     		about.show();
                     	});
                     },
-                    label: "About Maqetta",
+                    label: "关于 BUPT Visual Editor",
                     menubarPath: "davinci.help/about"
                 },
                 {
@@ -429,18 +429,18 @@ return {
                 {
                     id: "logout",
                     action: "davinci/actions/LogoutAction",
-                    label: "Logout",
+                    label: "注销",
                     menubarPath: "davinci.usersettings/logout"
                 }
             ]
         },
         {
-            id: "explorerActions",
+            id: "explorerActions",              //Files中的文件右键菜单
             visible: true,
             actions: [
                 {
                     id: "davinci.ui.rename",
-                    label: "Rename...",
+                    label: "重命名...",
                     iconClass:"renameIcon",
                     run: function() {
                     	require(['./ui/Resource'], function(r) {
@@ -454,7 +454,7 @@ return {
                 },
                 {
                     id: "davinci.ui.delete",
-                    label: "Delete",
+                    label: "删除",
                     iconClass: "deleteIcon",
                     isEnabled: function(item) {
                         return require('./ui/Resource').canModify(item);
@@ -469,7 +469,7 @@ return {
                 },
                 {
                     id: "davinci.ui.download",
-                    label: "Download",
+                    label: "下载",
                     iconClass: "downloadSomeIcon",
                     action: "davinci/actions/DownloadAction",
                     isEnabled: function(item) {
@@ -507,7 +507,7 @@ return {
                         run: function() {
                             alert("view toolbar");
                         },
-                        label: "Copy",
+                        label: "复制",
                         toolbarPath: "davinci.toolbar.main/edit",
                         menubarPath: "davinci.edit/cut"
                     }
@@ -522,7 +522,7 @@ return {
                 actions: [
 	                {
 	                    id: "davinci.ui.newfile",
-	                    label: "New folder...",
+	                    label: "新文件夹...",
 	                    iconClass:"newFolderIcon",
 	                    run: function() {
 	                    	require(['./ui/Resource'], function(r) {
@@ -544,7 +544,7 @@ return {
                                 }
                             );
                         },
-                        label: "Download Entire Project",
+                        label: "下载完整项目",
                         toolbarPath: "download"
                     },
                     {
@@ -557,12 +557,12 @@ return {
                                 }
                             );
                         },
-                        label: "Download Selected Files",
+                        label: "下载选中的文件",
                         toolbarPath: "download"
                     },
                     {
                         id: "davinci.ui.addFiles",
-                        label: "Upload files...",
+                        label: "上传文件...",
                         iconClass:"uploadIcon",
                         run: function() {
                         	require(['./ui/Resource'], function(r) {
@@ -576,7 +576,7 @@ return {
                     },
                     {
                         id: "davinci.ui.addFiles",
-                        label: "Upload and Extract ZIP file...",
+                        label: "上传并解压ZIP文件...",
                         iconClass:"uploadIcon",
                         run: function() {
                         	require(['./ui/Resource'], function(r) {
@@ -598,7 +598,20 @@ return {
                                 }
                             );
                         },
-                        label: "Modify Libraries",
+                        label: "管理库文件",
+                        toolbarPath: "download"
+                    },
+                    {
+                        id: "download",
+                        iconClass: 'downloadApkIcon',
+                        run: function() {
+                            require(['./ui/Resource'],
+                                function(Resource) {
+                            		Resource.showCreateAndroidWidgetDialog();
+                                }
+                            );
+                        },
+                        label: "生成 Android apk",
                         toolbarPath: "download"
                     }
                 ]

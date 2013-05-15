@@ -291,7 +291,6 @@ getLabel: function(widget) {
 	if (helper && helper.getWidgetText) {
 		widgetText = helper.getWidgetText(widget);
 	}
-
 	//TODO: move to getWidgetText helper methods
 	var domNode = widget.domNode;
 	switch(widget.type.replace(/\//g, ".")){

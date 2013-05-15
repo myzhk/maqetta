@@ -173,7 +173,13 @@
 	width: 16px;
 	height: 16px;
 }
-
+.downloadApkIcon {
+	background-image: url(img/creatAndroidAPK.jpg); /* FIXME: add logic for new_document-disabled.gif? */
+	background-position: 0;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+}
 .saveIcon {
 	background-image: url(img/sprite.png); /* FIXME: add logic for save_edit-disabled.gif? */
 	background-position: -82px -993px;

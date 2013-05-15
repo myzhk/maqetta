@@ -24,7 +24,7 @@ return declare("davinci.ve.PageEditor", ModelEditor, {
 	_latestSourceMode: "source",
 	_latestLayoutMode: "flow",
 
-    constructor: function (element, fileName) {
+    constructor: function (element, fileName) {		//fileName是当前编辑页面的文件名，如./project1/index.html
         this._bc = new BorderContainer({}, element);
 
         this.domNode = this._bc.domNode;

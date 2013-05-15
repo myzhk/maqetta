@@ -8,13 +8,13 @@ return {
     "davinci.view": [
         {
             id: "Palette",
-            title: "Palette",
+            title: "控件库",
             viewClass: "davinci/ve/palette/HtmlWidgets",
             iconClass: "paletteIcon paletteIconWidgets"
         },
         {
             id: "states",
-            title: "Scenes",
+            title: "场景",
             viewClass: "davinci/ve/views/StatesView",
             iconClass: "paletteIcon paletteIconStates"
         },
@@ -23,7 +23,7 @@ return {
          */
         {
             id: "object",
-            title: "Object",
+            title: "对象",
             viewClass: "davinci/ve/views/ObjectView"
         },
 
@@ -39,7 +39,7 @@ return {
     "davinci.perspective": [
         {
             id: "pageDesign",
-            title: "Page Design",
+            title: "页面设计",
             views: [
                 {
                     viewID: "davinci.ve.Palette",
@@ -89,20 +89,20 @@ return {
             expandPalettes: ["left"]
         }
     ],
-    "davinci.actionSets": [
+    "davinci.actionSets": [       //右键菜单
         {
             id: "cutCopyPaste",
             visible: true,
             actions: [
                 {
-                    label: "Cut",
+                    label: "剪切",
                     keySequence: "M1+X",
                     iconClass: "editActionIcon editCutIconSmall",
                     action: "davinci/ve/actions/CutAction",
                     menubarPath: "davinci.edit/cut"
                 },
                 {
-                    label: "Copy",
+                    label: "复制",
                     keySequence: "M1+C",
                     iconClass: "editActionIcon editCopyIconSmall",
                     action: "davinci/ve/actions/CopyAction",
@@ -111,83 +111,83 @@ return {
                 {
                     keySequence: "M1+V",
                     iconClass: "editActionIcon editPasteIconSmall",
-                    label: "Paste",
+                    label: "粘贴",
                     action: "davinci/ve/actions/PasteAction",
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                     keySequence: "DEL",
                     iconClass: "editActionIcon editDeleteIconSmall",
-                    label: "Delete",
+                    label: "删除",
                     action: "davinci/ve/actions/DeleteAction",
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                     iconClass: "editActionIcon selectParentIconSmall",
-                    label: "Select parent",
+                    label: "选择父节点",
                     action: "davinci/ve/actions/SelectParentAction",
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                     iconClass: "editActionIcon selectAncestorIconSmall",
-                    label: "Select ancestor...",
+                    label: "选择祖先节点...",
                     action: "davinci/ve/actions/SelectAncestorAction",
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                     iconClass: "editActionIcon unselectAllIconSmall",
-                    label: "Unselect all",
+                    label: "取消选择所有",
                     action: "davinci/ve/actions/UnselectAllAction",
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                     iconClass: "editActionIcon",
-                    label: "Surround with &lt;A&gt;",
+                    label: "包裹于 &lt;A&gt;中",
                     action: "davinci/ve/actions/SurroundAction",
                     surroundWithTagName:'a',
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                     iconClass: "editActionIcon",
-                    label: "Surround with &lt;DIV&gt;",
+                    label: "包裹于 &lt;DIV&gt;中",
                     action: "davinci/ve/actions/SurroundAction",
                     surroundWithTagName:'div',
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                     iconClass: "editActionIcon",
-                    label: "Surround with &lt;SPAN&gt;",
+                    label: "包裹于 &lt;SPAN&gt;中",
                     action: "davinci/ve/actions/SurroundAction",
                     surroundWithTagName:'span',
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                     iconClass: "editActionIcon moveToFrontIconSmall",
-                    label: "Move to front",
+                    label: "移至最前",
                     action: "davinci/ve/actions/MoveToFrontAction",
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                     iconClass: "editActionIcon moveForwardIconSmall",
-                    label: "Move forward",
+                    label: "向前移动",
                     action: "davinci/ve/actions/MoveForwardAction",
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                     iconClass: "editActionIcon moveBackwardIconSmall",
-                    label: "Move backward",
+                    label: "向后移动",
                     action: "davinci/ve/actions/MoveBackwardAction",
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                     iconClass: "editActionIcon moveToBackIconSmall",
-                    label: "Move to back",
+                    label: "移至最底层",
                     action: "davinci/ve/actions/MoveToBackAction",
                     menubarPath: "davinci.edit/cut"
                 },
                 {
                 iconClass: "editActionIcon",
-                label: "Manage States...",
+                label: "管理状态...",
                 action: "davinci/ve/actions/ManageStates",
                 menubarPath: "davinci.edit/cut"
             	}/*,
@@ -211,7 +211,7 @@ return {
                         radioGroup: "displayMode",
                         method: "switchDisplayMode",
                         // initialValue : true,
-                        label: "Widgets",
+                        label: "小工具",
                         toolbarPath: "displayMode"
                     },
                     {
@@ -219,7 +219,7 @@ return {
                         iconClass: 'sourceModeIcon editActionIcon',
                         method: "switchDisplayMode",
                         radioGroup: "displayMode",
-                        label: "Source",
+                        label: "源代码",
                         toolbarPath: "displayMode"
                     }
                 ]
@@ -233,21 +233,21 @@ return {
 						id: "addState",
 						iconClass: 'viewActionIcon addStateIcon',
 						action: "davinci/ve/actions/AddState",
-						label: "Add state",
+						label: "添加状态",
 						toolbarPath: "states1"
 					},
 					{
 						id: "removeState",
 						iconClass: 'viewActionIcon removeStateIcon',
 						action: "davinci/ve/actions/RemoveState",
-						label: "Remove state",
+						label: "移除状态",
 						toolbarPath: "states1"
 					},
 					{
 						id: "modifyState",
 						iconClass: 'viewActionIcon modifyStateIcon',
 						action: "davinci/ve/actions/ModifyState",
-						label: "Modify state",
+						label: "修改状态",
 						toolbarPath: "states1"
 					},
 					{
@@ -255,7 +255,7 @@ return {
 						className: "manageStatesButton",
 						iconClass: 'viewActionIcon manageStatesIcon',
 						action: "davinci/ve/actions/ManageStates",
-						label: "For currently selected widgets, manage widget visibility for different states",
+						label: "对于当前选中的小工具,管理其在不同状态下的可见性",
 						toolbarPath: "states1"
 					},
 					{
@@ -263,7 +263,7 @@ return {
 						className: "newWidgetsCurrentStateButton",
 						iconClass: 'viewActionIcon newWidgetsCurrentStateIcon',
 						action: "davinci/ve/actions/NewWidgetsCurrentState",
-						label: "Toggle whether new widgets go to Background or current state",
+						label: "将新的小工具放置于当前状态或背景状态",
 						toolbarPath: "states2"
 					},
 					{
@@ -271,7 +271,7 @@ return {
 						className: "highlightBaseWidgetsButton",
 						iconClass: 'viewActionIcon highlightBaseWidgetsIcon',
 						action: "davinci/ve/actions/HighlightBaseWidgets",
-						label: "When in custom state, highlight widgets from Background state",
+						label: "在默认状态下，高亮显示背景状态的小工具",
 						toolbarPath: "states2"
 					}
 
@@ -296,7 +296,7 @@ return {
                   id: "savecombo",
                   className: "maqLabelButton",
                   showLabel: true,
-                  label: "Save",
+                  label: "保存",
                   toolbarPath: "save",
                   type:'ComboButton',
                   run: function() {
@@ -316,18 +316,18 @@ return {
                           isEnabled: function(context) {
                               return require('../Workbench').getOpenEditor();
                           },
-                          label: "Save",
+                          label: "保存",
                   		keyBinding: {accel: true, charOrCode: "s", allowGlobal: true}
                       },
                       {
-                          iconClass: 'saveAsIcon',
+                          iconClass: '保存为图标',
                           run: function() {
                               require("../ui/Resource").saveAs('html');
                           },
                           isEnabled: function(context) {
                               return require('../Workbench').getOpenEditor();
                           },
-                          label: "Save As",
+                          label: "另存为...",
                   		keyBinding: {accel: true, shift: true, charOrCode: "s", allowGlobal: true}
                       },
                       {
@@ -341,7 +341,7 @@ return {
                           isEnabled: function(context) {
                               return require('../Workbench').getOpenEditor();
                            },
-                           label: "Save As Widget"
+                           label: "另存为小工具"
                        },
                   ]
               },
@@ -349,7 +349,7 @@ return {
                 	id: "undo",
                     iconClass: 'editActionIcon undoIcon',
                     action: "davinci/actions/UndoAction",
-                    label: "Undo",
+                    label: "撤销",
                     //showLabel: true,
                     toolbarPath: "undoredo",
                     keyBinding: {accel: true, charOrCode: "z"}
@@ -359,13 +359,13 @@ return {
                     iconClass: 'editActionIcon redoIcon',
                     action: "davinci/actions/RedoAction",
                     //showLabel: true,
-                    label: "Redo",
+                    label: "重做",
                     toolbarPath: "undoredo",
                     keyBinding: {accel: true, shift: true, charOrCode: "z"}
                 },
 				{
 				    id: "cut",
-				    label: "Cut",
+				    label: "剪切",
 				    iconClass: "editActionIcon editCutIcon",
 				    action: "davinci/ve/actions/CutAction",
 				    toolbarPath: "cutcopypaste",
@@ -374,7 +374,7 @@ return {
 				},
 				{
 				    id: "copy",
-				    label: "Copy",
+				    label: "复制",
 				    iconClass: "editActionIcon editCopyIcon",
 				    action: "davinci/ve/actions/CopyAction",
 				    toolbarPath: "cutcopypaste",
@@ -390,7 +390,7 @@ return {
 				{
                     id: "delete",
                     iconClass: "editActionIcon editDeleteIcon",
-                    label: "Delete",
+                    label: "删除",
                     action: "davinci/ve/actions/DeleteAction",
                     toolbarPath: "delete",
                     keyBinding: {charOrCode: [dojo.keys.DELETE, dojo.keys.BACKSPACE]}
@@ -409,7 +409,7 @@ return {
                             }
                         });
                     },
-                    label: "Preview in Browser",
+                    label: "在浏览器中预览",
                     toolbarPath: "undoredo",
                     keyBinding: {accel: true, charOrCode: "0", allowGlobal: true}
                 },
@@ -417,7 +417,7 @@ return {
                     id: "documentSettings",
                     iconClass: 'documentSettingsIcon',
                     className: 'documentSettings davinciFloatRight',
-                    label: "Document settings",
+                    label: "文档设置",
                     toolbarPath: "undoredo",
                     type:'DropDownButton',
                     menu:[
@@ -426,78 +426,78 @@ return {
                            iconClass: 'selectThemeIcon',
                            className: "davinciFloatRight",
                            action: "davinci/actions/SelectThemeAction",
-                           label: "Switch theme"
+                           label: "切换主题"
                         },
                        {
                            id: "chooseDevice",
                            iconClass: 'deviceIcon',
                            className: "davinciFloatRight",
                            action: "davinci/ve/actions/ChooseDeviceAction",
-                           label: "Choose device"
+                           label: "选择设备"
                        },
                        {
                            id: "rotateDevice",
                            iconClass: 'rotateIcon',
                            className: "davinciFloatRight",
                            action: "davinci/ve/actions/RotateDeviceAction",
-                           label: "Rotate device"
+                           label: "旋转设备"
                        },
                        {
                            iconClass: "editActionIcon",
-                           label: "Select parent",
+                           label: "选择父节点",
                            action: "davinci/ve/actions/SelectParentAction"
                        },
                        {
                            iconClass: "editActionIcon",
-                           label: "Select ancestor...",
+                           label: "选择祖先节点r...",
                            action: "davinci/ve/actions/SelectAncestorAction"
                        },
                        {
                            iconClass: "editActionIcon",
-                           label: "Unselect all",
+                           label: "取消选择所有",
                            action: "davinci/ve/actions/UnselectAllAction"
                        },
                        {
                            iconClass: "editActionIcon",
-                           label: "Move to front",
+                           label: "移至最前",
                            action: "davinci/ve/actions/MoveToFrontAction"
                        },
                        {
                            iconClass: "editActionIcon",
-                           label: "Move forward",
+                           label: "向前移动",
                            action: "davinci/ve/actions/MoveForwardAction"
                        },
                        {
                            iconClass: "editActionIcon",
-                           label: "Move backward",
+                           label: "向后移动",
                            action: "davinci/ve/actions/MoveBackwardAction"
                        },
                        {
                            iconClass: "editActionIcon",
-                           label: "Move to back",
+                           label: "移至最底层",
                            action: "davinci/ve/actions/MoveToBackAction"
                        },
                        {
                            iconClass: "editActionIcon",
-                           label: "Surround with &lt;A&gt;",
+                           label: "包裹于 &lt;A&gt;中",
                            action: "davinci/ve/actions/SurroundAction",
                            surroundWithTagName:'a'
                        },
                        {
                            iconClass: "editActionIcon",
-                           label: "Surround with &lt;DIV&gt;",
+                           label: "包裹于 &lt;DIV&gt;中",
                            action: "davinci/ve/actions/SurroundAction",
                            surroundWithTagName:'div'
                        },
                        {
                            iconClass: "editActionIcon",
-                           label: "Surround with &lt;SPAN&gt;",
+                           label: "包裹于 &lt;SPAN&gt;中",
                            action: "davinci/ve/actions/SurroundAction",
                            surroundWithTagName:'span'
                        },
                        {
                            iconClass: "editActionIcon",
-                           label: "Manage States...",
+                           label: "管理状态...",
                            action: "davinci/ve/actions/ManageStates",
                            menubarPath: "davinci.edit/cut"
                        	}/*,
@@ -512,24 +512,24 @@ return {
                     id: "stickynote",
                     iconClass: 'stickynoteIcon',
                     action: "davinci/actions/StickyNoteAction",
-                    label: "Add note",
+                    label: "添加笔记",
                     toolbarPath: "stickynote"
                 },
                 {
                     id: "layout",
                     className: "maqLabelButton davinciFloatRight maqLayoutDropDownButton",
                     showLabel: true,
-                    label: "Flow",	// will be updated by code
+                    label: "流式布局",	// will be updated by code
                     toolbarPath: "undoredo",
                     type:'DropDownButton',
                     menu:[
                         {
-                            label: "Flow",
+                            label: "流式布局",
                             iconClass: "flowLayoutIcon",
                             method: "selectLayoutFlow"
                         },
                         {
-                            label: "Absolute",
+                            label: "绝对布局",
                             iconClass: "absoluteLayoutIcon",
                             method: "selectLayoutAbsolute"
                         }
@@ -539,7 +539,7 @@ return {
                     id: "sourcecombo",
                     className: "maqLabelButton davinciFloatRight maqSourceComboButton",
                     showLabel: true,
-                    label: "Source",
+                    label: "源代码",
                     action: "davinci/ve/actions/ViewSourceAction",
                     toolbarPath: "undoredo",
                     type:'ComboButton',
@@ -548,19 +548,19 @@ return {
                             keyBinding: {accel: true, charOrCode: "2", allowGlobal: true},
                             iconClass: 'editActionIcon sourceModeIcon sourceMenuIcon',
                             action: "davinci/ve/actions/ViewSourceMenuAction",
-                            label: "Source only"
+                            label: "源代码"
                         },
                         {
                             keyBinding: {accel: true, charOrCode: "3", allowGlobal: true},
                             iconClass: 'editActionIcon splitVerticalIcon sourceMenuIcon',
                             action: "davinci/ve/actions/ViewSplitVMenuAction",
-                            label: "Split Vertically"
+                            label: "垂直分屏"
                         },
                         {
                             keyBinding: {accel: true, charOrCode: "4", allowGlobal: true},
                             iconClass: 'editActionIcon splitHorizontalIcon sourceMenuIcon',
                             action: "davinci/ve/actions/ViewSplitHMenuAction",
-                            label: "Split Horizontally"
+                            label: "水平分屏"
                         }
                     ]
                 },
@@ -570,7 +570,7 @@ return {
                     showLabel: true,
                     className: 'maqLabelButton davinciFloatRight maqDesignButton',
                     action: "davinci/ve/actions/ViewDesignAction",
-                    label: "Design",
+                    label: "设计",
                     toolbarPath: "undoredo",
                     keyBinding: {accel: true, charOrCode: "1", allowGlobal: true}
                 },
@@ -649,7 +649,7 @@ return {
 						},
 		                className: "maqLabelButton",
 		                showLabel: true,
-						label: "Save",
+						label: "保存",
 						toolbarPath: "save",
 						keyBinding: {accel: true, charOrCode: "s"}
 					},
@@ -657,7 +657,7 @@ return {
 						id: "undo",
 					    iconClass: 'editActionIcon undoIcon',
 					    action: "davinci/actions/UndoAction",
-					    label: "Undo",
+					    label: "撤销",
 					    //showLabel: true,
 					    toolbarPath: "undoredo",
 					    keyBinding: {accel: true, charOrCode: "z"}
@@ -667,7 +667,7 @@ return {
 					    iconClass: 'editActionIcon redoIcon',
 					    action: "davinci/actions/RedoAction",
 					    //showLabel: true,
-					    label: "Redo",
+					    label: "重做",
 					    toolbarPath: "undoredo",
 					    keyBinding: {accel: true, shift: true, charOrCode: "z"}
 					}

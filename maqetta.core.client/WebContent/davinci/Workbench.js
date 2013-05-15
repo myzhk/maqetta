@@ -175,6 +175,8 @@ var initializeWorkbenchState = function(){
 		// and associated views. Put after the xhr.get to allow execution parallelism.
 		dojo.publish("/davinci/ui/initialPerspectiveReady", []);
 
+		//alert(JSON.stringify(state));
+		
 		if (state.project) {
 			Workbench.setActiveProject(state.project);
 		}
@@ -319,6 +321,13 @@ var Workbench = {
 						shadowTab.destroyRecursive();
 					}
 				}
+//				else if (type == 'modified') {
+//					alert ("modified" + "\n" + changedResource.getURL() + changedResource.getMarkers(null));
+//					var editorId = filename2id(changedResource.getPath());
+//					alert(editorId);
+//					var shadowId = editorIdToShadowId(editorId);
+//					alert(shadowId);
+//				}
 			}
 		);
 		Runtime.subscribe('/dojo/io/error', handleIoError); // /dojo/io/error" is sent whenever an IO request has errored. 

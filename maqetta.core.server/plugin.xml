@@ -42,5 +42,9 @@
 	 <extension point="maqetta.core.server.initialUserFiles">
              <initalUserFile path="WebContent/project/InitialContentReadWrite"/>
       </extension>
-	 
+	 <extension point="maqetta.core.server.command">
+     		 <command path="createAndroidApk" class="maqetta.core.server.command.CreateAndroidApk" />
+	       	 <command path="downloadAndroidApk" class="maqetta.core.server.command.DownloadAndroidApk" />
+	  
+	  </extension>
 </plugin>

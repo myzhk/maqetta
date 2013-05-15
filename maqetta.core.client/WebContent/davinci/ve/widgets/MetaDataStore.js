@@ -17,6 +17,9 @@ define(["dojo/_base/declare",
 			dojo.mixin(this._allValues, values);
 	
 			var items = [];
+			items.push({name: "scanCode()", value: "scanCode()"});
+			items.push({name: "capturePhoto()", value: "capturePhoto()"});
+			items.push({name: "getWifiInfo()", value: "getWifiInfo()"});
 			dojo.forEach(this._allValues, function(v){
 				items.push({name: v, value: v});
 			});

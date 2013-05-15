@@ -100,7 +100,6 @@ public class UserManagerImpl implements IUserManager {
         if (checkUserExists(userName)) {
             throw new UserException(UserException.ALREADY_EXISTS);
         }
-
         if (this.maxUsers > 0 && this.usersCount >= this.maxUsers) {
             throw new UserException(UserException.MAX_USERS);
         }

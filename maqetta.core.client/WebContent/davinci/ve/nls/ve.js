@@ -2,55 +2,55 @@ define({ root:
 {
 		//SwitchingStyleView.js
 		"common":"Common",
-		"widgetSpecific":"Widget",
-		"events":"Events",
-		"layout":"Layout",
-		"showMinMax":"show min/max",
-		"padding":"Padding",
-		"margins":"Margins",
-		"showtrbl":"show t/r/b/l",
-		"background":"Background",
-		"border":"Border",
-		"showDetails":"show details",
-		"fontsAndText":"Fonts/Text",
-		"shapesSVG":"SVG",
-		"properties":"properties",
+		"widgetSpecific":"小工具",
+		"events":"事件",
+		"layout":"布局",
+		"showMinMax":"显示最小/最大",
+		"padding":"内边距",
+		"margins":"外边距",
+		"showtrbl":"显示 t/r/b/l",
+		"background":"背景",
+		"border":"边框",
+		"showDetails":"详细信息",
+		"fontsAndText":"字体/文本",
+		"shapesSVG":"矢量图形",
+		"properties":"属性",
 		
 		//StatesView.js
-		"Scenes":"Scenes",
-		"States":"States",
-		"ActiveScene":"This scene is currently visible",
+		"Scenes":"场景",
+		"States":"状态",
+		"ActiveScene":"此场景当前可见",
 		"AppStateFocus":"This application state is the target for application-state-specific visibility or styling changes",
-		"InitialScene":"This scene will show initially when the page runs",
+		"InitialScene":"此场景将在程序开始运行时被显示",
 		
 		//DeviceActions.js
-		"chooseDeviceSilhouette":"Choose a device silhouette: ",
-		"filesHasUnsavedChanges":"The file '${0}' has unsaved changes, \"Save\" changes and continue with switch device silhouette.",
+		"chooseDeviceSilhouette":"选择一个设备轮廓: ",
+		"filesHasUnsavedChanges":"文件 '${0}' 有未保存的改动, 请\"保存\" 改动后再继续选择设备轮廓.",
 		
 		//SelectAncestorAction.js
-		"selectAncestorTitle":"Select ancestor",
-		"selectAncestorLabel":"Select ancestor (closest ancestor listed first):",
+		"selectAncestorTitle":"选择祖先",
+		"selectAncestorLabel":"选择祖先 (最近祖先优先):",
 		
 		//actions/AddState.js, ManageStates.js, ModifyState.js, RenameState.js, StateContainer.js
 		"createNewState":"Create New State",
 		"updateCurrentState":"Update Current State",
-		"createLabel":"Create",
-		"updateLabel":"Update",
+		"createLabel":"创建",
+		"updateLabel":"更新",
 		"modifyState":"Modify State",
-		"modifyLabel":"Update",
+		"modifyLabel":"更新",
 		"stateLabel":"Name",
-		"enterStateName":"Please enter a state name.",
-		"stateNameExists":"State name '${name}' already exists. Please enter a different state name.",
-		"renameState":"Rename State",
-		"renameLabel":"Rename",
-		"cancelLabel":"Cancel",
-		"newStateLabel":"New name:",
-		"manageStates":"Manage Widget Visibility for Different States",
-		"manageStatesCheckLabel":"Check:",
-		"manageStatesCheckCurrentStateOnly":"Current state",
-		"manageStatesCheckAll":"All",
-		"manageStatesUncheckAll":"None",
-		"manageStatesCheckBackgroundOnly":"Background only",
+		"enterStateName":"请输入状态名.",
+		"stateNameExists":"状态名 '${name}' 已经存在. 请输入一个不同的状态名.",
+		"renameState":"重命名状态",
+		"renameLabel":"重命名",
+		"cancelLabel":"取消",
+		"newStateLabel":"新名字:",
+		"manageStates":"管理小工具在不同状态下的可见性",
+		"manageStatesCheckLabel":"检查:",
+		"manageStatesCheckCurrentStateOnly":"当前状态",
+		"manageStatesCheckAll":"所有",
+		"manageStatesUncheckAll":"无",
+		"manageStatesCheckBackgroundOnly":"只有背景",
 		"manageStatesAllVisibleFromBackground":"(Visible from Background)",
 		"manageStatesSomeVisibleFromBackground":"(Some visible from Background)",
 		"manageStatesSomeVisibleSomeHidden":"(Some visible, some hidden)",
@@ -129,7 +129,7 @@ define({ root:
 		//widgets/ColorPicker.js
 		"colorPicker":"Color picker...",
 		"removeValue":"Remove Value",
-		"selectColor":"select a color",
+		"selectColor":"选择颜色",
 		
 		//widgets/WidgetToolBar.js
 		"toolBarFor":"for: ",
@@ -155,11 +155,11 @@ define({ root:
 		
 		//ve.plugin.js
 		//Labels for ComboButton for source vs split-h vs split-v
-		"SourceComboButton-source":"Source",
-		"SourceComboButton-splitHorizontal":"Split-H",
-		"SourceComboButton-splitVertical":"Split-V",
+		"SourceComboButton-source":"源代码",
+		"SourceComboButton-splitHorizontal":"水平分屏",
+		"SourceComboButton-splitVertical":"垂直分屏",
 		// Labels for DropdownButton for flow vs absolute
-		"LayoutDropDownButton-flow":"Flow",
-		"LayoutDropDownButton-absolute":"Absolute"
+		"LayoutDropDownButton-flow":"流式布局",
+		"LayoutDropDownButton-absolute":"绝对布局"
 }
 });

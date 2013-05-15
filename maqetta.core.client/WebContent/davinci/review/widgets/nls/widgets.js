@@ -1,9 +1,9 @@
 define({ root:
 {
 		//Comment.js
-		"open":"Open",
-		"close":"Close",
-		"more":" more...",
+		"open":"打开",
+		"close":"关闭",
+		"more":" 更多...",
 		"commentHide":" hide",
 		"errorUpdateCom":"error to update comment , response=${0} , reason=${1}",
 		"errorAddingCom":"error adding comment , response=${0} , reason=${1}",

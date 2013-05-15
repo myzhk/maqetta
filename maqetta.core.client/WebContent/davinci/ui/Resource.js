@@ -4,6 +4,9 @@ define(['dojo/_base/declare',
        '../model/Path',
        '../Runtime',
        '../Workbench',
+       './CreateAndroidWidget',
+       'dojo/io/iframe',
+       'dijit/ProgressBar',
        '../workbench/Preferences',
        '../ve/RebuildPage',
        './Rename',
@@ -20,7 +23,7 @@ define(['dojo/_base/declare',
        'dijit/form/Button',
        'dojox/form/uploader/plugins/HTML5',      
        
-],function(declare, Resource, Path, Runtime,Workbench, Preferences, RebuildPage, Rename, NewHTMLFileOption, OpenFile, NewFolder, NewFile, AddFiles, AddFilesZip, NewProject, Dialog, uiNLS, Theme){
+],function(declare, Resource, Path, Runtime, Workbench, CreateAndroidWidget, Iframe, ProgressBar, Preferences, RebuildPage, Rename, NewHTMLFileOption, OpenFile, NewFolder, NewFile, AddFiles, AddFilesZip, NewProject, Dialog, uiNLS, Theme){
 
 var createNewDialog = function(fileNameLabel, createLabel, type, dialogSpecificClass, dialogSpecificClassOptions, fileName, existingResource, optionalMessage) {
 	var resource=existingResource || getSelectedResource();
@@ -71,6 +74,8 @@ var checkFileName = function(fullPath) {
 var getSelectedResource = function(){
 	return (uiResource.getSelectedResources() || [])[0];
 };
+
+
 
 var uiResource = {
 		newHTMLDialogSpecificClass: "davinci/ui/widgets/NewHTMLFileOptions",
@@ -515,7 +520,68 @@ var uiResource = {
 					}, newHtmlParams);
 				});
 			}
+		},
+		
+		//----------------------by zk-------------------------------
+		checkIsSelectIndexHtml: function() {
+			var selectedFiles = uiResource.getSelectedResources();
+			alert(selectedFiles.length);
+			var isSelectIndexHtml = false;
+			for ( var i = 0; i < selectedFiles.length; i++) {
+				var resource = Resource.findResource(selectedFiles[i].getPath());
+				alert(selectedFiles[i].getPath());
+				console.log(resource);
+				if (resource.extension == "html"
+						&& resource.name == "index.html") {
+					alert("file");
+					isSelectIndexHtml = true;
+					break;
+				}
+				if (resource.elementType == "Folder") {
+					alert("folder");
+					var allResources = Resource.findResource("*.html", true, resource,true);
+					if (allResources != null) {
+						for ( var k = 0; k < allResources.length; k++) {
+							if (allResources[k].name == "index.html") {
+								isSelectIndexHtml = true;
+								break;
+							}
+						}
+					}
+				}
+			}
+			alert(isSelectIndexHtml);
+			return isSelectIndexHtml;
+		},
+		checkIsExistIndexHtml: function() {
+			var resource = Resource.findResource("*.html", true, "./project1", true);
+			var isExistIndexHtml = false;
+			if (resource != null) {
+				for (var k = 0; k < resource.length; k++) {
+					if (resource[k].name == "index.html") {
+						isExistIndexHtml = true;
+						break;
+					}
+				}
+			}
+			return isExistIndexHtml;
+		},
+		
+		downloadAndroidApk : function(apkPath) {
+			Iframe.send({
+				url : "./cmd/downloadAndroidApk",
+				content : {
+					apkPath : apkPath
+				}
+			});
+		},
+		
+		showCreateAndroidWidgetDialog: function(){
+			var createAndroidWidget = new CreateAndroidWidget();
+    		Workbench.showModal(createAndroidWidget,
+    				"CreateAndroidWidget","width: 600px");
 		}
+		//----------------------------------------------------------
 
 	};
 

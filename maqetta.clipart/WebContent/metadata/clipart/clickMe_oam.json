@@ -1,0 +1,73 @@
+{
+	"id": "http://www.maqetta.org/clipart/clickMe",
+	"name": "clickMe",
+	"spec": "1.0",
+	"version": "1.0",
+	"require": [
+		{
+			"type": "javascript",
+			"src": "dojo/dojo.js",
+			"$library": "dojo"
+		},
+		{
+			"type": "javascript-module",
+			"format": "amd",
+			"src": "dojox/mobile",
+			"$library": "dojo"
+		},
+		{
+			"$library": "dojo",
+			"format": "amd",
+			"src": "clipart/clickMe",
+			"type": "javascript-module"
+		},
+		{
+			"$library": "dojo",
+			"format": "amd",
+			"src": "maqetta/cordova",
+			"type": "javascript-module"
+		},
+		{
+			"$library": "dojo",
+			"format": "amd",
+			"src": "maqetta/barcodescanner",
+			"type": "javascript-module"
+		},
+		{
+			"$library": "dojo",
+			"format": "amd",
+			"src": "maqetta/camera",
+			"type": "javascript-module"
+		},
+		{
+			"$library": "dojo",
+			"format": "amd",
+			"src": "maqetta/dump",
+			"type": "javascript-module"
+		},
+		{
+			"$library": "dojo",
+			"format": "amd",
+			"src": "maqetta/main",
+			"type": "javascript-module"
+		},
+		{
+			"$library": "dojo",
+			"format": "amd",
+			"src": "maqetta/WifiInfo",
+			"type": "javascript-module"
+		},
+		{
+			"$library": "dojo",
+			"format": "amd",
+			"src": "maqetta/WifiInfoPlugin",
+			"type": "javascript-module"
+		},
+	],
+	"library": {
+		"dojo": {
+			"src": "../../dojo/dojo/dojo.js"
+		}
+	},
+	"content": "<button>CESHI</button>"
+}

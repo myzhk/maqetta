@@ -51,9 +51,8 @@ return declare("davinci.html.HTMLFile", HTMLItem, {
 
 	getDocumentElement: function(context) {
 		for (var i=0;i<this.children.length; i++)
-			if (this.children[i].tag == "html")
+			if (this.children[i].tag == "html") 
 				return this.children[i];
-
 	},
 
 	findElement: function(id) {

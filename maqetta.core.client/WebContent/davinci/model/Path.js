@@ -23,7 +23,7 @@ var Path = declare("davinci.model.Path", null, {
 		}
 	},
 
-	endsWith: function(tail) {
+	endsWith: function(tail) {		//判断是否以某个字符串结尾？
 		var segments = dojo.clone(this.segments);
 		var tailSegments = (new Path(tail)).getSegments();
 		while (tailSegments.length > 0 && segments.length > 0) {
@@ -34,20 +34,20 @@ var Path = declare("davinci.model.Path", null, {
 		return true;
 	},
 
-	getExtension: function() {
+	getExtension: function() {		//获取后缀
 		if (!this.extension) {
 			this.extension = this.path.substr(this.path.lastIndexOf('.')+1);
 		}
 		return this.extension;
 	},
 
-	segment : function(index){
+	segment : function(index){	//获取path的某段
 		var segs = this.getSegments();
 		if(segs.length < index) return null;
 		return segs[index];
 	},
 	
-	getSegments: function() {
+	getSegments: function() {		//将路径以"/"为分隔符分成多段
 		if (!this.segments) {
 			var path = this.path;
 			this.segments = path.split('/');
@@ -65,11 +65,11 @@ var Path = declare("davinci.model.Path", null, {
 		return this.segments;
 	},
 
-	isAbsolute: function(  ) {
+	isAbsolute: function(  ) {			//以"/"开头就是绝对路径吗？
 		return this.hasLeading;
 	},
 
-	getParentPath: function() {
+	getParentPath: function() {			//得到上一级路径
 		if (!this._parentPath) {
 			var parentSegments = dojo.clone(this.segments);
 			parentSegments.pop();
@@ -78,11 +78,11 @@ var Path = declare("davinci.model.Path", null, {
 		return dojo.clone(this._parentPath);
 	},
 
-	_clone: function() {
+	_clone: function() {		//复制当前路径？
 		return new Path(dojo.clone(this.segments), this.hasLeading, this.hasTrailing);
 	},
 
-	append: function(tail) {
+	append: function(tail) {	
 		tail = tail || "";
 		if (typeof tail == 'string') {
 			tail = new Path(tail);
@@ -162,7 +162,7 @@ var Path = declare("davinci.model.Path", null, {
 		return this.segments.length;
 	},
 
-	matchingFirstSegments: function(anotherPath) {
+	matchingFirstSegments: function(anotherPath) {		//找出两个路径第一次不匹配的位置
 		var mySegments = this.segments;
 		var pathSegments = anotherPath.getSegments();
 		var max = Math.min(mySegments.length, pathSegments.length);

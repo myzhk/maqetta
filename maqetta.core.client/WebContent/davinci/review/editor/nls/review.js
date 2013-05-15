@@ -1,6 +1,6 @@
 define({ root:
 {
 	//ReviewEditor.js
-	"unsavedComment": "The file '${0}' has an unsaved comment in the Comments tab. Are you sure you want to close WITHOUT saving?"
+	"unsavedComment": "文件 '${0}' 在评论标签中有未保存的评论. 确认不保存关闭吗?"
 }
 });

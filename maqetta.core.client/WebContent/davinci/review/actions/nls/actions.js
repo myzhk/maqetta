@@ -1,18 +1,18 @@
 define({ root:
 {
 		//CloseVersionAction.js
-		"areYouSureClose":"Are you sure you want to stop this review?",
-		"closeSuccessful":"Stopped the review successfully!",
+		"areYouSureClose":"确认关闭这个评审吗?",
+		"closeSuccessful":"成功停止评审!",
 		
 		//DeleteVersionAction.js
-		"areYouSureDelete":"Are you sure you want to delete this review?",
-		"deleteSuccessful":"Deleted the review successfully!",
+		"areYouSureDelete":"确认删除这个评审吗?",
+		"deleteSuccessful":"成功删除评审!",
 		
 		//OpenVersionAction.js
-		"openSuccessful":"Started the review successfully!",
+		"openSuccessful":"成功启动评审!",
 		
 		//PublishAction.js
-		"newReview":"New Review",
-		"editReview":"Edit Review"
+		"newReview":"新评审",
+		"editReview":"编辑评审"
 }
 });

@@ -13,7 +13,7 @@ return {
 		},
 		{
 			id: "reviewNavigator",
-			title: "Reviews",
+			title: "评审",
 			viewClass: "davinci/review/view/CommentExplorerView",
             iconClass: "paletteIcon paletteIconReviews"
 
@@ -66,7 +66,7 @@ return {
 	"davinci.editor": [
 		{
 			id: "CommentReviewEditor",
-			name: "Review Editor",
+			name: "评审编辑器",
 			extensions: "rev",
 			isDefault: true,
 			editorClass: "davinci/review/editor/ReviewEditor",
@@ -91,7 +91,7 @@ return {
 					id: "newReview",
 					action: "davinci/review/actions/PublishAction",
 	                iconClass: "newOpenMenuItem newReviewMenuItem",
-					label: "Review...",
+					label: "评审...",
 					menubarPath: "davinci.new/newTheme"
 				}
 			]
@@ -102,35 +102,35 @@ return {
 			actions: [
 				{
 					id: "davinci.review.view",
-					label: "Open",
+					label: "打开",
 					action: "davinci/review/actions/ViewFileAction",
 					//iconClass: "viewActionIcon reviewFileIcon",
 					menubarPath: "newfile"
 				},
 				{
 					id: "davinci.review.edit",
-					label: "Edit...",
+					label: "编辑...",
 					action: "davinci/review/actions/EditVersionAction",
 					//iconClass: "viewActionIcon editVersionIcon",
 					menubarPath: "newfile"
 				},
 				{
 					id: "davinci.review.open",
-					label: "Start",
+					label: "开始",
 					action: "davinci/review/actions/OpenVersionAction",
 					//iconClass: "viewActionIcon openVersionIcon",
 					menubarPath: "newfile"
 				},
 				{
 					id: "davinci.review.close",
-					label: "Stop...",
+					label: "停止...",
 					action: "davinci/review/actions/CloseVersionAction",
 					//iconClass: "viewActionIcon closeVersionIcon",
 					menubarPath: "newfile"
 				},
 				{
 					id: "davinci.review.delete",
-					label: "Delete...",
+					label: "删除...",
 					action: "davinci/review/actions/DeleteVersionAction",
 					//iconClass: "viewActionIcon deleteVersionIcon",
 					menubarPath: "newfile",
@@ -138,7 +138,7 @@ return {
 				},
 				{
 					id: "davinci.review.restart",
-					label: "Republish...",
+					label: "重新发布...",
 					action: "davinci/review/actions/RestartVersionAction",
 					menubarPath: "newfile"
 				}
@@ -161,28 +161,28 @@ return {
 			actions: [
 				{
 					id: "arrow",
-					label: "Draw arrow",
+					label: "绘制箭头",
 					iconClass: "davinciAnnotationIcon davinciAnnotationIconArrow",
 					action: "davinci/review/actions/ArrowAction",
 					toolbarPath: "annotationtools"
 				},
 				{
 					id: "rect",
-					label: "Draw rectangle",
+					label: "绘制矩形",
 					iconClass: "davinciAnnotationIcon davinciAnnotationIconRect",
 					action: "davinci/review/actions/RectAction",
 					toolbarPath: "annotationtools"
 				},
 				{
 					id: "ellipse",
-					label: "Draw ellipse",
+					label: "绘制椭圆",
 					iconClass: "davinciAnnotationIcon davinciAnnotationIconEllipse",
 					action: "davinci/review/actions/EllipseAction",
 					toolbarPath: "annotationtools"
 				},
 				{
 					id: "textAnnotation",
-					label: "Draw text",
+					label: "绘制文本",
 					iconClass: "davinciAnnotationIcon davinciAnnotationIconText",
 					action: "davinci/review/actions/TextAction",
 					toolbarPath: "annotationtools"
@@ -190,7 +190,7 @@ return {
 				{
 				    id: "deleteAnnotation",
 				    iconClass: "davinciAnnotationIcon davinciAnnotationIconDelete",
-				    label: "Delete Annotation",
+				    label: "删除标记",
 				    action: "davinci/review/actions/DeleteAnnotationAction",
 				    toolbarPath: "annotationtools_delete",
 				    keyBinding: {charOrCode: [dojo.keys.DELETE, dojo.keys.BACKSPACE]}

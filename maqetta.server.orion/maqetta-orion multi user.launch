@@ -23,7 +23,6 @@
 <setEntry value="maqetta.client.feature:default"/>
 <setEntry value="maqetta.libraries.feature:default"/>
 <setEntry value="maqetta.server.feature:default"/>
-<setEntry value="maqetta.zazl.feature:default"/>
 <setEntry value="org.eclipse.orion.base.feature:default"/>
 <setEntry value="org.eclipse.orion.client.feature:default"/>
 <setEntry value="org.eclipse.orion.server.authentication.feature:default"/>

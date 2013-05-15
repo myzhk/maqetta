@@ -82,7 +82,6 @@ var getEventSelectionValues = function(root){
 			items.push(val);
 		}
 	}
-	
 	return items;
 };
 
@@ -182,7 +181,7 @@ var EventSelection = declare("davinci.ve.widgets.EventSelection", [ViewLite], {
 			this._buildSelectionValues();
 		 },	
 
-		 _onChange : function(a){
+		 _onChange : function(a){   //当onclick等文本框中的内容变化时触发，将改变的内容传到服务器？？
 			var index = a.target;
 			var widget = dijit.byId(this.pageTemplate[index].id);
 			var	value = widget.get('value');
@@ -236,7 +235,6 @@ var EventSelection = declare("davinci.ve.widgets.EventSelection", [ViewLite], {
 		_buildSelectionValues : function(){
 			var root = this._getRoot();
 			var items = getEventSelectionValues(root);
-			
 			for(var i=0;i<this.pageTemplate.length;i++){
 				var box = dijit.byId(this.pageTemplate[i].id);
 				box.store.clearValues();
